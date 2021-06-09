@@ -19,6 +19,7 @@ public class CorporationRepository {
     public String addCorporation(Corporation corporation){
         //a unique 24-byte hexadecimal string
         corporation.setCorporationID(ObjectId.get().toHexString());
+        corporationList.add(corporation);
         return corporation.toString();
     }
 
